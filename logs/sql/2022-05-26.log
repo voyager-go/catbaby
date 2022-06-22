@@ -1,0 +1,218 @@
+2022-05-26 12:11:09.620 [DEBU] {2081579e4b8cf21639c7112807f3bda9} [ 13 ms] [default] [rows:5  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 12:11:09.648 [DEBU] {2081579e4b8cf21639c7112807f3bda9} [ 27 ms] [default] [rows:1  ] INSERT INTO `user`(`nickname`,`phone`,`created_at`) VALUES('zhangsan','15105191181','2022-05-26 12:11:09') ON DUPLICATE KEY UPDATE `nickname`=VALUES(`nickname`),`phone`=VALUES(`phone`) 
+2022-05-26 12:11:51.608 [DEBU] {c008af65558cf2163ac711281b8c6b8b} [  4 ms] [default] [rows:0  ] INSERT INTO `user`(`created_at`,`nickname`,`phone`) VALUES('2022-05-26 12:11:51','zhangsan','15105191181') ON DUPLICATE KEY UPDATE `nickname`=VALUES(`nickname`),`phone`=VALUES(`phone`) 
+2022-05-26 12:11:58.491 [DEBU] {70541200578cf2163bc71128afeb18ff} [  1 ms] [default] [rows:0  ] INSERT INTO `user`(`phone`,`nickname`,`created_at`) VALUES('15105191181','zhangsan','2022-05-26 12:11:58') ON DUPLICATE KEY UPDATE `phone`=VALUES(`phone`),`nickname`=VALUES(`nickname`) 
+2022-05-26 15:40:59.723 [DEBU] {b82bd2f3be97f216a3903d2c97443a28} [133 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 15:40:59.736 [ERRO] {b82bd2f3be97f216a3903d2c97443a28} [ 13 ms] [default] [rows:0  ] INSERT INTO `user`(`nickname`,`created_at`,`phone`) VALUES('zhangsan','2022-05-26 15:40:59','15105191181') 
+Error: Error 1062: Duplicate entry '15105191181' for key 'user.user_phone_uindex' 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core.go:656
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core_underlying.go:250
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core_underlying.go:112
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core.go:445
+5.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_model_insert.go:313
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_model_insert.go:170
+7.  catbaby/internal/service.(*sUser).Register
+    /Users/artist/Program/go/catbaby/internal/service/user.go:16
+8.  catbaby/internal/controller.user.Register
+    /Users/artist/Program/go/catbaby/internal/controller/user.go:15
+9.  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:153
+10. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+11. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:128
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:74
+13. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+14. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+15. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_middleware_handler_response.go:25
+16. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:54
+17. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+18. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:53
+19. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+21. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_middleware_tracing.go:78
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:95
+23. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:94
+25. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+27. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_server_handler.go:121
+ 
+2022-05-26 17:31:06.784 [DEBU] {7084b34ec19df2161ebc546eaf157217} [ 10 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 17:31:06.787 [DEBU] {7084b34ec19df2161ebc546eaf157217} [  2 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191181' LIMIT 1 
+2022-05-26 17:31:06.793 [ERRO] {7084b34ec19df2161ebc546eaf157217} [  5 ms] [default] [rows:0  ] INSERT INTO `user`(`phone`,`nickname`,`created_at`) VALUES('15105191181','zhangsan','2022-05-26 17:31:06') 
+Error: Error 1062: Duplicate entry '15105191181' for key 'user.user_phone_uindex' 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core.go:656
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core_underlying.go:250
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core_underlying.go:112
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core.go:445
+5.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_model_insert.go:313
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_model_insert.go:170
+7.  catbaby/internal/service.(*sUser).Register
+    /Users/artist/Program/go/catbaby/internal/service/user.go:23
+8.  catbaby/internal/controller.user.Register
+    /Users/artist/Program/go/catbaby/internal/controller/user.go:15
+9.  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:153
+10. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+11. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:128
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:74
+13. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+14. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+15. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_middleware_handler_response.go:25
+16. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:54
+17. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+18. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:53
+19. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+21. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_middleware_tracing.go:78
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:95
+23. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:94
+25. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+27. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_server_handler.go:121
+ 
+2022-05-26 17:40:23.062 [DEBU] {801ddbd3429ef216eefa9625c3f78aad} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 17:40:23.064 [DEBU] {801ddbd3429ef216eefa9625c3f78aad} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191181' LIMIT 1 
+2022-05-26 17:41:03.042 [DEBU] {3028dc224c9ef216ea61a3742ae3e9b9} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 17:41:03.044 [DEBU] {3028dc224c9ef216ea61a3742ae3e9b9} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191181' LIMIT 1 
+2022-05-26 17:41:36.232 [DEBU] {88ac10dd539ef2163080bc51ba066bff} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 17:41:36.233 [DEBU] {88ac10dd539ef2163080bc51ba066bff} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191181' LIMIT 1 
+2022-05-26 18:14:07.131 [DEBU] {30f8a7161aa0f216511e03046413e240} [ 22 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:14:07.133 [DEBU] {30f8a7161aa0f216511e03046413e240} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191181' LIMIT 1 
+2022-05-26 18:14:24.378 [DEBU] {9852f01b1ea0f216521e030465b9cef6} [  1 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:15:07.129 [DEBU] {b08c960f28a0f216718c754db730a8f9} [  9 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:15:07.132 [DEBU] {b08c960f28a0f216718c754db730a8f9} [  2 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:15:51.969 [DEBU] {b8659f7f32a0f216751fb86fde2d5490} [ 20 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:15:51.974 [DEBU] {b8659f7f32a0f216751fb86fde2d5490} [  4 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:16:27.241 [DEBU] {205df1b63aa0f216faf11934356a0feb} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:16:27.246 [DEBU] {205df1b63aa0f216faf11934356a0feb} [  4 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:16:27.254 [DEBU] {205df1b63aa0f216faf11934356a0feb} [  8 ms] [default] [rows:1  ] INSERT INTO `user`(`phone`,`status`,`created_at`,`nickname`) VALUES('15105191182',1,'2022-05-26 18:16:27','zhangsan')  
+2022-05-26 18:16:31.888 [DEBU] {50ec1bcc3ba0f216fbf11934769ef911} [  2 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:16:31.891 [ERRO] {50ec1bcc3ba0f216fbf11934769ef911} [  3 ms] [default] [rows:0  ] INSERT INTO `user`(`status`,`phone`,`created_at`,`nickname`) VALUES(1,'15105191182','2022-05-26 18:16:31','zhangsan') 
+Error: Error 1062: Duplicate entry '15105191182' for key 'user.user_phone_uindex' 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core.go:656
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core_underlying.go:250
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core_underlying.go:112
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core.go:445
+5.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_model_insert.go:313
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_model_insert.go:170
+7.  catbaby/internal/dao.(*userDao).Create
+    /Users/artist/Program/go/catbaby/internal/dao/user.go:42
+8.  catbaby/internal/service.(*sUser).Register
+    /Users/artist/Program/go/catbaby/internal/service/user.go:23
+9.  catbaby/internal/controller.user.Register
+    /Users/artist/Program/go/catbaby/internal/controller/user.go:16
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:153
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:128
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:74
+14. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+16. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_middleware_handler_response.go:25
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:54
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:53
+20. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+22. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_middleware_tracing.go:78
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:95
+24. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:94
+26. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+28. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/artist/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_server_handler.go:121
+ 
+2022-05-26 18:17:14.610 [DEBU] {d898aabd45a0f216be144c1a59e2d56b} [ 15 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:17:14.612 [DEBU] {d898aabd45a0f216be144c1a59e2d56b} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:17:38.237 [DEBU] {08f2b33e4ba0f216925ff40686ee8c9d} [  3 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:17:38.239 [DEBU] {08f2b33e4ba0f216925ff40686ee8c9d} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:17:54.868 [DEBU] {6838b21d4fa0f2166d0f951fce8f5362} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:17:54.870 [DEBU] {6838b21d4fa0f2166d0f951fce8f5362} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:19:36.713 [DEBU] {50855ed466a0f2161813964e248ae39f} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:19:36.715 [DEBU] {50855ed466a0f2161813964e248ae39f} [  1 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-26 18:21:45.424 [DEBU] {507517cc84a0f21654b71128117623ca} [  5 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:21:45.427 [DEBU] {507517cc84a0f21654b71128117623ca} [  2 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:22:39.581 [DEBU] {a8c2ec6791a0f21666504062dc902646} [  8 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:22:39.583 [DEBU] {a8c2ec6791a0f21666504062dc902646} [  2 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-05-26 18:22:49.947 [DEBU] {28002cd293a0f2166750406278175a37} [  1 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-26 18:24:21.843 [DEBU] {00115a37a9a0f2168f085928df78fff4} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-26 18:24:21.845 [DEBU] {00115a37a9a0f2168f085928df78fff4} [  1 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-26 18:24:21.849 [DEBU] {00115a37a9a0f2168f085928df78fff4} [  3 ms] [default] [rows:1  ] INSERT INTO `user`(`status`,`phone`,`created_at`,`nickname`) VALUES(1,'15105191183','2022-05-26 18:24:21','zhangsan')  
+2022-05-26 18:24:32.246 [DEBU] {286dada3aba0f216900859280c73afb5} [  2 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-26 18:24:39.517 [DEBU] {a0c61e55ada0f216910859286afde495} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 

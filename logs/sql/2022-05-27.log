@@ -1,0 +1,39 @@
+2022-05-27 15:05:10.679 [DEBU] {e064e02d5fe4f216fa3df72ad5c82a31} [ 38 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 15:05:10.690 [DEBU] {e064e02d5fe4f216fa3df72ad5c82a31} [  4 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 17:47:38.507 [DEBU] {306e16c73cedf216575dab3e3a8b54d3} [ 14 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 17:47:38.509 [DEBU] {306e16c73cedf216575dab3e3a8b54d3} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 17:47:51.185 [DEBU] {28d38fbb3fedf216585dab3ecedb96df} [  1 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191184' LIMIT 1 
+2022-05-27 17:47:51.321 [DEBU] {28d38fbb3fedf216585dab3ecedb96df} [ 47 ms] [default] [rows:1  ] INSERT INTO `user`(`created_at`,`nickname`,`phone`,`password`,`status`) VALUES('2022-05-27 17:47:51','zhangsan','15105191184','$2a$10$Of9blaHWL.QSHTqB42U0n.IKypKNr9mr/flVA.YAaB.0ITSQrmTDO',1)  
+2022-05-27 17:48:39.111 [DEBU] {18ac01e44aedf216595dab3edaa7e1fb} [  4 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 17:48:43.677 [DEBU] {888358f44bedf2165a5dab3edb7ab36d} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 17:52:32.500 [DEBU] {601d2a3a81edf2167f66c91adb667084} [ 18 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 17:52:32.502 [DEBU] {601d2a3a81edf2167f66c91adb667084} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 17:55:45.035 [DEBU] {1075f30eaeedf2164b716c64475d6a84} [  5 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 17:55:45.037 [DEBU] {1075f30eaeedf2164b716c64475d6a84} [  2 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 17:56:15.785 [DEBU] {181eaf36b5edf216ca3ea24804494115} [ 24 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 17:56:15.787 [DEBU] {181eaf36b5edf216ca3ea24804494115} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 17:56:55.939 [DEBU] {08a51a91beedf21639554a139b273902} [  3 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 17:56:55.940 [DEBU] {08a51a91beedf21639554a139b273902} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 17:58:27.060 [DEBU] {30e466c8d3edf216b345f83be632aebd} [  4 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 17:58:27.061 [DEBU] {30e466c8d3edf216b345f83be632aebd} [  1 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191185' LIMIT 1 
+2022-05-27 17:58:27.150 [DEBU] {30e466c8d3edf216b345f83be632aebd} [  9 ms] [default] [rows:1  ] INSERT INTO `user`(`created_at`,`password`,`status`,`nickname`,`phone`) VALUES('2022-05-27 17:58:27','$2a$10$7RLN/WVIGq04PQiwxkqFceqHSfgMjpUueUKBq/sxNJisRgEcAtHIy',1,'zhangsan','15105191185')  
+2022-05-27 17:58:37.503 [DEBU] {28ba1837d6edf216b445f83b6382a8bc} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 18:00:21.627 [DEBU] {b0031e75eeedf216b0dcaf674e26f96b} [  4 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 18:00:21.629 [DEBU] {b0031e75eeedf216b0dcaf674e26f96b} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 18:01:48.533 [DEBU] {a0851ab102eef21660491f61ac721cc6} [  5 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 18:01:48.534 [DEBU] {a0851ab102eef21660491f61ac721cc6} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191183' LIMIT 1 
+2022-05-27 18:02:39.692 [DEBU] {8058a49a0eeef21661491f61acebcbc0} [  2 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191185' LIMIT 1 
+2022-05-27 18:06:21.993 [DEBU] {b8f6965c42eef2160e826c68bbcd6d1a} [  4 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 18:06:21.995 [DEBU] {b8f6965c42eef2160e826c68bbcd6d1a} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191185' LIMIT 1 
+2022-05-27 18:10:00.945 [DEBU] {585c275775eef21694325633fbed9950} [  4 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 18:10:00.946 [DEBU] {585c275775eef21694325633fbed9950} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191185' LIMIT 1 
+2022-05-27 18:11:05.312 [DEBU] {30da8e5384eef21638f21e1f043cfb51} [  8 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 18:11:05.313 [DEBU] {30da8e5384eef21638f21e1f043cfb51} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191185' LIMIT 1 
+2022-05-27 18:11:10.547 [DEBU] {404e178c85eef21639f21e1f173fe040} [  0 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191185' LIMIT 1 
+2022-05-27 18:12:58.108 [DEBU] {805628979eeef2163af21e1f6c0ac906} [  1 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191180' LIMIT 1 
+2022-05-27 18:12:58.191 [DEBU] {805628979eeef2163af21e1f6c0ac906} [ 10 ms] [default] [rows:1  ] INSERT INTO `user`(`phone`,`password`,`status`,`created_at`,`nickname`) VALUES('15105191180','$2a$10$A3rXaUVMgaKWgjJ2Z0YzmeUljUAiyj7B8zwxhSRMD8rTuDFkwpfZm',1,'2022-05-27 18:12:58','zhangsan')  
+2022-05-27 18:13:31.182 [DEBU] {b847534aa6eef21606d8bc7e3993c811} [  4 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 18:13:31.184 [DEBU] {b847534aa6eef21606d8bc7e3993c811} [  1 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191186' LIMIT 1 
+2022-05-27 18:13:31.273 [DEBU] {b847534aa6eef21606d8bc7e3993c811} [  9 ms] [default] [rows:1  ] INSERT INTO `user`(`created_at`,`nickname`,`phone`,`password`,`status`) VALUES('2022-05-27 18:13:31','zhangsan','15105191186','$2a$10$kvYp8/IPM35u8IZRSoTDQ.VNycn.DA1jiRplBwwkkDVoap9S6xQGq',1)  
+2022-05-27 18:14:51.994 [DEBU] {306b1a1bb9eef21635b10e78fdd81718} [  4 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-05-27 18:14:51.995 [DEBU] {306b1a1bb9eef21635b10e78fdd81718} [  1 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191185' LIMIT 1 
