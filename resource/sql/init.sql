@@ -1,3 +1,26 @@
+create table comment
+(
+    id         bigint unsigned auto_increment comment '编号'
+        primary key,
+    pid        bigint unsigned  not null comment '父级ID，为0表示顶级',
+    post_id    bigint unsigned  not null comment '帖子ID',
+    user_id    bigint unsigned  not null comment '评论人ID',
+    status     tinyint unsigned not null comment '评论状态 0表示屏蔽 1表示正常',
+    content    text             null comment '评论内容',
+    created_at timestamp        not null comment '创建时间',
+    updated_at timestamp        null comment '更新时间'
+)
+    comment '评论表';
+
+create index comment_pid_index
+    on comment (pid);
+
+create index comment_post_id_index
+    on comment (post_id);
+
+create index comment_user_id_index
+    on comment (user_id);
+
 create table post
 (
     id          bigint unsigned auto_increment comment '主键编号'
@@ -35,7 +58,7 @@ create table user
     constraint user_phone_uindex
         unique (phone)
 )
-    comment '用户信息表' auto_increment = 8;
+    comment '用户信息表' auto_increment = 13;
 
 create index user_status_index
     on user (status);

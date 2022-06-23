@@ -23,6 +23,6 @@ gfcli:
   gen:
     dao:
       - link:     "mysql:root:root@tcp(127.0.0.1:3306)/catbaby"
-        tables:   "user,post"
+        tables:   "user,post,comment"
         jsonCase: "CamelLower"
 
