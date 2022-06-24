@@ -5,10 +5,10 @@
 package dao
 
 import (
-	"catbaby/internal/dao/internal"
-	"catbaby/internal/model/entity"
 	"context"
 	"github.com/gogf/gf/v2/frame/g"
+	"threebody/internal/dao/internal"
+	"threebody/internal/model/entity"
 )
 
 // internalUserDao is internal type for wrapping internal DAO implements.

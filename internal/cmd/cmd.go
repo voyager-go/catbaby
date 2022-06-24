@@ -1,14 +1,14 @@
 package cmd
 
 import (
-	"catbaby/internal/service"
 	"context"
+	"threebody/internal/service"
 
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/ghttp"
 	"github.com/gogf/gf/v2/os/gcmd"
 
-	"catbaby/internal/controller"
+	"threebody/internal/controller"
 )
 
 var (
@@ -28,6 +28,7 @@ var (
 				group.Middleware(ghttp.MiddlewareHandlerResponse, service.Middleware().CORS, service.Middleware().Auth)
 				group.Bind(
 					controller.Hello,
+					controller.Role,
 				)
 			})
 			s.Run()

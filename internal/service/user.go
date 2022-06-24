@@ -1,13 +1,13 @@
 package service
 
 import (
-	"catbaby/internal/consts"
-	"catbaby/internal/dao"
-	"catbaby/internal/model"
 	"context"
 	"errors"
 	"github.com/gogf/gf/v2/frame/g"
 	"golang.org/x/crypto/bcrypt"
+	"threebody/internal/consts"
+	"threebody/internal/dao"
+	"threebody/internal/model"
 )
 
 type sUser struct{}

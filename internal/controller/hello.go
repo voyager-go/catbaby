@@ -5,7 +5,7 @@ import (
 
 	"github.com/gogf/gf/v2/frame/g"
 
-	"catbaby/api/v1"
+	"threebody/api/v1"
 )
 
 var (

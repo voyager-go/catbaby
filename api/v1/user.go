@@ -10,7 +10,7 @@ type UserRegisterReq struct {
 	Nickname string `json:"nickname" v:"required#请输入昵称|length:2,16#昵称格式为2-16位" dc:"用户昵称"`
 	Password string `json:"password" v:"required#请输入密码|password#密码格式为6-18位" dc:"用户密码"`
 	Phone    string `json:"phone"    v:"phone#请输入正确的手机号" dc:"手机号"`
-	Status   int    `json:"status"   v:"in:0,1#请输入符合格式的状态" dc:"状态:0不正常1正常"`
+	Status   uint   `json:"status"   v:"in:0,1#请输入符合格式的状态" dc:"状态:0不正常1正常"`
 }
 
 type UserRegisterRes struct {

@@ -1,10 +1,10 @@
 package service
 
 import (
-	"catbaby/internal/model"
 	"context"
 	jwt "github.com/gogf/gf-jwt/v2"
 	"github.com/gogf/gf/v2/frame/g"
+	"threebody/internal/model"
 	"time"
 )
 

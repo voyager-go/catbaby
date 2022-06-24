@@ -5,7 +5,7 @@
 package dao
 
 import (
-	"catbaby/internal/dao/internal"
+	"threebody/internal/dao/internal"
 )
 
 // internalCommentDao is internal type for wrapping internal DAO implements.

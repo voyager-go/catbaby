@@ -1,4 +1,4 @@
-module catbaby
+module threebody
 
 go 1.15
 

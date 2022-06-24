@@ -8,19 +8,19 @@ import (
 	"threebody/internal/dao/internal"
 )
 
-// internalPostDao is internal type for wrapping internal DAO implements.
-type internalPostDao = *internal.PostDao
+// internalRoleDao is internal type for wrapping internal DAO implements.
+type internalRoleDao = *internal.RoleDao
 
-// postDao is the data access object for table post.
+// roleDao is the data access object for table role.
 // You can define custom methods on it to extend its functionality as you wish.
-type postDao struct {
-	internalPostDao
+type roleDao struct {
+	internalRoleDao
 }
 
 var (
-	// Post is globally public accessible object for table post operations.
-	Post = postDao{
-		internal.NewPostDao(),
+	// Role is globally public accessible object for table role operations.
+	Role = roleDao{
+		internal.NewRoleDao(),
 	}
 )
 

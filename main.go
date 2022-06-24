@@ -1,11 +1,11 @@
 package main
 
 import (
-	_ "catbaby/internal/packed"
+	_ "threebody/internal/packed"
 
 	"github.com/gogf/gf/v2/os/gctx"
 
-	"catbaby/internal/cmd"
+	"threebody/internal/cmd"
 )
 
 func main() {

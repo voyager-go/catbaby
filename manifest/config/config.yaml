@@ -16,13 +16,13 @@ database:
     ctxKeys: ["RequestId"]
 
   default:
-    link:   "mysql:root:root@tcp(127.0.0.1:3306)/catbaby"
+    link:   "mysql:root:root@tcp(127.0.0.1:3306)/threebody"
     debug:  true
 # gf工具配置
 gfcli:
   gen:
     dao:
-      - link:     "mysql:root:root@tcp(127.0.0.1:3306)/catbaby"
-        tables:   "user,post,comment"
+      - link:     "mysql:root:root@tcp(127.0.0.1:3306)/threebody"
+        tables:   "user,post,comment,role"
         jsonCase: "CamelLower"
 

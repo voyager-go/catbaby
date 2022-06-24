@@ -45,6 +45,30 @@ create index post_status_index
 create index post_user_id_index
     on post (user_id);
 
+create table role
+(
+    id             bigint unsigned auto_increment comment '主键编号'
+        primary key,
+    avatar         varchar(300)                 null comment '头像',
+    name           varchar(80)                  not null comment '名称',
+    nickname       varchar(80)                  null comment '别名',
+    survival_stage varchar(80)                  null comment '生存阶段',
+    nationality    varchar(100)                 null comment '国籍',
+    achievement    varchar(300)                 null comment '主要成就',
+    gender         tinyint unsigned             not null comment '是否展示:0女1男',
+    content        longtext                     not null comment '介绍',
+    if_show        tinyint unsigned default '1' not null comment '是否展示:0否1是',
+    created_at     timestamp                    not null comment '创建时间',
+    updated_at     timestamp                    null comment '更新时间'
+)
+    comment '故事角色';
+
+create index role_if_show_index
+    on role (if_show);
+
+create index role_name_index
+    on role (name);
+
 create table user
 (
     id         bigint auto_increment comment '用户编号'

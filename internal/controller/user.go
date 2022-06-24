@@ -1,10 +1,10 @@
 package controller
 
 import (
-	v1 "catbaby/api/v1"
-	"catbaby/internal/model"
-	"catbaby/internal/service"
 	"context"
+	"threebody/api/v1"
+	"threebody/internal/model"
+	"threebody/internal/service"
 )
 
 type user struct{}
