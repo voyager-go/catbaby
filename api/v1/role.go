@@ -4,7 +4,7 @@ import "github.com/gogf/gf/v2/frame/g"
 
 type RoleCreateReq struct {
 	g.Meta        `path:"/backend/role/create" tags:"三体" method:"post" summary:"故事角色"`
-	Avatar        string `json:"avatar"        ` // 头像
+	Avatar        string `json:"avatar" dc:"头像"`
 	Name          string `json:"name" v:"required#请输入名称|length:1,30#昵称格式为1-30位" dc:"名称"`
 	Nickname      string `json:"nickname" v:"length:1,30#昵称格式为1-30位" dc:"昵称"`
 	SurvivalStage string `json:"survival_stage" dc:"生存阶段"`
