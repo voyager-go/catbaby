@@ -7,6 +7,7 @@ import (
 
 type IRole interface {
 	Create(ctx context.Context, in model.RoleCreateInput) error
+	Update(ctx context.Context, in model.RoleUpdateInput) error
 }
 
 var iRole IRole

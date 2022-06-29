@@ -18,4 +18,4 @@ main
 output/
 manifest/output/
 temp/
-manifest/config/config.yaml
+manifest/config/config.bak

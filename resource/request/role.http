@@ -1,0 +1,35 @@
+POST http://127.0.0.1:8000/backend/role/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTY1MTcxMTQsImlkIjoxNCwibmlja25hbWUiOiJ6aGFuZ3NhbiIsIm9yaWdfaWF0IjoxNjU2NTE1MzE0LCJwaG9uZSI6IjE1MTA1MTkxMTgyIn0.QgOvOd5tCUNXnzn0VHpEI6Jk3Bm_vwl5i0C5tnmzHz0
+
+{
+  "avatar": "string",
+  "name": "string",
+  "nickname": "string",
+  "survival_stage": "string",
+  "nationality": "string",
+  "achievement": "string",
+  "gender": "0",
+  "content": "string",
+  "if_show": "0"
+}
+
+###
+
+
+PUT http://127.0.0.1:8000/backend/role/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTY1MTcxMTQsImlkIjoxNCwibmlja25hbWUiOiJ6aGFuZ3NhbiIsIm9yaWdfaWF0IjoxNjU2NTE1MzE0LCJwaG9uZSI6IjE1MTA1MTkxMTgyIn0.QgOvOd5tCUNXnzn0VHpEI6Jk3Bm_vwl5i0C5tnmzHz0
+
+{
+  "role_id": "2",
+  "avatar": "string",
+  "name": "string",
+  "nickname": "string",
+  "survival_stage": "string",
+  "nationality": "string",
+  "achievement": "string",
+  "gender": "0",
+  "content": "string",
+  "if_show": "0"
+}

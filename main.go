@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "threebody/internal/logic"
 	_ "threebody/internal/packed"
 
 	"github.com/gogf/gf/v2/os/gctx"

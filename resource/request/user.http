@@ -4,9 +4,9 @@ Content-Type: application/json
 
 {
   "nickname": "zhangsan",
-  "phone": "15105191186",
+  "phone": "15105191182",
   "password": "123456",
-  "status": 0
+  "status": 1
 }
 
 ### 用户登录
@@ -14,6 +14,6 @@ POST http://127.0.0.1:8000/login
 Content-Type: application/json
 
 {
-  "phone": "15105191185",
+  "phone": "15105191182",
   "password":"123456"
 }

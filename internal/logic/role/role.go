@@ -22,3 +22,9 @@ func (*sRole) Create(ctx context.Context, in model.RoleCreateInput) error {
 	_, err := dao.Role.Ctx(ctx).Data(in).Insert()
 	return err
 }
+
+// Update 更新故事角色记录
+func (*sRole) Update(ctx context.Context, in model.RoleUpdateInput) error {
+	_, err := dao.Role.Ctx(ctx).Data(in).Save()
+	return err
+}

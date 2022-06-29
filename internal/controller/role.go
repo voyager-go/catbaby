@@ -13,13 +13,23 @@ type role struct{}
 
 var Role = role{}
 
-func (*role) Create(ctx context.Context, req *v1.RoleCreateReq) (res *v1.RoleCreateRes, err error) {
+func (*role) Create(ctx context.Context, req *v1.RoleCreateReq) (res *v1.RoleRes, err error) {
 	var input model.RoleCreateInput
 	err = gconv.Struct(req, &input)
 	if err != nil {
 		return nil, err
 	}
-	g.Dump(input)
 	err = service.Role().Create(ctx, input)
+	return
+}
+
+func (*role) Update(ctx context.Context, req *v1.RoleUpdateReq) (res *v1.RoleRes, err error) {
+	g.Dump(req.RoleId)
+	var input model.RoleUpdateInput
+	err = gconv.Struct(req, &input)
+	if err != nil {
+		return nil, err
+	}
+	g.Dump(input)
 	return
 }

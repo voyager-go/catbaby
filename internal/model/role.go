@@ -2,6 +2,16 @@ package model
 
 // RoleCreateInput 角色创建
 type RoleCreateInput struct {
+	RoleBaseInput
+}
+
+// RoleUpdateInput 角色更新
+type RoleUpdateInput struct {
+	RoleId string `json:"role_id"`
+	RoleBaseInput
+}
+
+type RoleBaseInput struct {
 	Avatar        string `json:"avatar"         ` // 头像
 	Name          string `json:"name"           ` // 名称
 	Nickname      string `json:"nickname"       ` // 别名
