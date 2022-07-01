@@ -7,7 +7,7 @@ type RoleCreateInput struct {
 
 // RoleUpdateInput 角色更新
 type RoleUpdateInput struct {
-	RoleId string `json:"role_id"`
+	Id uint `json:"id"`
 	RoleBaseInput
 }
 

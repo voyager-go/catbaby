@@ -9,19 +9,19 @@ type RoleBaseReq struct {
 	SurvivalStage string `json:"survival_stage" dc:"生存阶段"`
 	Nationality   string `json:"nationality" dc:"国籍"`
 	Achievement   string `json:"achievement" dc:"主要成就"`
-	Gender        uint   `json:"gender" v:"in:0,1#请选择性别" dc:"状态:0女1男"`
+	Gender        string `json:"gender" v:"in:0,1#请选择性别" dc:"状态:0女1男"`
 	Content       string `json:"content" v:"required#请输入人物介绍" dc:"人物介绍"`
-	IfShow        uint   `json:"if_show" v:"in:0,1#请选择是否展示" dc:"状态:0否1是"`
+	IfShow        string `json:"if_show" v:"in:0,1#请选择是否展示" dc:"状态:0否1是"`
 }
 
 type RoleCreateReq struct {
-	g.Meta `path:"/backend/role/create" tags:"三体" method:"post" summary:"故事角色"`
+	g.Meta `path:"/backend/role" tags:"三体" method:"post" summary:"故事角色"`
 	RoleBaseReq
 }
 
 type RoleUpdateReq struct {
-	g.Meta `path:"/backend/role/update" tags:"三体" method:"put" summary:"故事角色"`
-	RoleId uint `json:"role_id" v:"min:1#请选择需要修改的角色"`
+	g.Meta `path:"/backend/role" tags:"三体" method:"put" summary:"故事角色"`
+	Id     string `json:"id" v:"required#请选择需要修改的角色"`
 	RoleBaseReq
 }
 

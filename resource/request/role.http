@@ -1,35 +1,35 @@
-POST http://127.0.0.1:8000/backend/role/create
+POST http://127.0.0.1:8000/backend/role
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTY1MTcxMTQsImlkIjoxNCwibmlja25hbWUiOiJ6aGFuZ3NhbiIsIm9yaWdfaWF0IjoxNjU2NTE1MzE0LCJwaG9uZSI6IjE1MTA1MTkxMTgyIn0.QgOvOd5tCUNXnzn0VHpEI6Jk3Bm_vwl5i0C5tnmzHz0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTY2ODU1ODUsImlkIjoyMywibmlja25hbWUiOiJ6aGFuZ3NhbiIsIm9yaWdfaWF0IjoxNjU2NjY3NTg1LCJwaG9uZSI6IjE1MTA1MTkxMTgyIn0.ZV3dd1hqvsPUR4CsU9E00w6u0KcLq1tBK9BfhFvLRiE
 
 {
-  "avatar": "string",
-  "name": "string",
-  "nickname": "string",
-  "survival_stage": "string",
-  "nationality": "string",
-  "achievement": "string",
-  "gender": "0",
+  "avatar": "https://goframe.org/pages/viewpage.action?pageId=1114517&src=contextnavpagetreemode",
+  "name": "李四",
+  "nickname": "小李四",
+  "survival_stage": "掩体",
+  "nationality": "汉族",
+  "achievement": "123",
+  "gender": "1",
   "content": "string",
-  "if_show": "0"
+  "if_show": "1"
 }
 
 ###
 
 
-PUT http://127.0.0.1:8000/backend/role/update
+PUT http://127.0.0.1:8000/backend/role
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTY1MTcxMTQsImlkIjoxNCwibmlja25hbWUiOiJ6aGFuZ3NhbiIsIm9yaWdfaWF0IjoxNjU2NTE1MzE0LCJwaG9uZSI6IjE1MTA1MTkxMTgyIn0.QgOvOd5tCUNXnzn0VHpEI6Jk3Bm_vwl5i0C5tnmzHz0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTY2ODU1ODUsImlkIjoyMywibmlja25hbWUiOiJ6aGFuZ3NhbiIsIm9yaWdfaWF0IjoxNjU2NjY3NTg1LCJwaG9uZSI6IjE1MTA1MTkxMTgyIn0.ZV3dd1hqvsPUR4CsU9E00w6u0KcLq1tBK9BfhFvLRiE
 
 {
-  "role_id": "2",
-  "avatar": "string",
-  "name": "string",
+  "id": "1",
+  "avatar": "https://goframe.org/pages/viewpage.action?pageId=30736904&focusedCommentId=51951498&refresh=1656668186708#comment-51951498",
+  "name": "张三",
   "nickname": "string",
   "survival_stage": "string",
   "nationality": "string",
   "achievement": "string",
-  "gender": "0",
+  "gender": "1",
   "content": "string",
   "if_show": "0"
 }

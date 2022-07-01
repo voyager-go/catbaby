@@ -59,9 +59,11 @@ create table role
     content        longtext                     not null comment '介绍',
     if_show        tinyint unsigned default '1' not null comment '是否展示:0否1是',
     created_at     timestamp                    not null comment '创建时间',
-    updated_at     timestamp                    null comment '更新时间'
+    updated_at     timestamp                    null comment '更新时间',
+    constraint role_name_uindex
+        unique (name)
 )
-    comment '故事角色';
+    comment '故事角色' auto_increment = 15;
 
 create index role_if_show_index
     on role (if_show);
@@ -82,7 +84,7 @@ create table user
     constraint user_phone_uindex
         unique (phone)
 )
-    comment '用户信息表' auto_increment = 13;
+    comment '用户信息表' auto_increment = 24;
 
 create index user_status_index
     on user (status);
