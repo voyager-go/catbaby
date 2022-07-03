@@ -21,6 +21,7 @@ type Role struct {
 	Achievement   interface{} // 主要成就
 	Gender        interface{} // 是否展示:0女1男
 	Content       interface{} // 介绍
+	Views         interface{} // 浏览量
 	IfShow        interface{} // 是否展示:0否1是
 	CreatedAt     *gtime.Time // 创建时间
 	UpdatedAt     *gtime.Time // 更新时间

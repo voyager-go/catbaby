@@ -6,6 +6,7 @@ package internal
 
 import (
 	"context"
+
 	"github.com/gogf/gf/v2/database/gdb"
 	"github.com/gogf/gf/v2/frame/g"
 )
@@ -28,6 +29,7 @@ type RoleColumns struct {
 	Achievement   string // 主要成就
 	Gender        string // 是否展示:0女1男
 	Content       string // 介绍
+	Views         string // 浏览量
 	IfShow        string // 是否展示:0否1是
 	CreatedAt     string // 创建时间
 	UpdatedAt     string // 更新时间
@@ -44,6 +46,7 @@ var roleColumns = RoleColumns{
 	Achievement:   "achievement",
 	Gender:        "gender",
 	Content:       "content",
+	Views:         "views",
 	IfShow:        "if_show",
 	CreatedAt:     "created_at",
 	UpdatedAt:     "updated_at",

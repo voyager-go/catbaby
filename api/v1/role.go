@@ -28,3 +28,14 @@ type RoleUpdateReq struct {
 type RoleRes struct {
 	g.Meta `mime:"text/json" example:"string"`
 }
+
+type RoleListReq struct {
+	g.Meta `path:"/frontend/role" method:"get" tags:"故事角色" summary:"展示故事角色列表页面"`
+	Search string `json:"search" dc:"关键词"`
+	PaginationReq
+}
+
+type RoleListRes struct {
+	g.Meta `mime:"text/html" type:"string" example:"<html/>"`
+	PaginationRes
+}

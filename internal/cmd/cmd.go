@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"context"
+	"threebody/internal/controller/backend"
 	"threebody/internal/service"
 
 	"github.com/gogf/gf/v2/frame/g"
@@ -21,14 +22,14 @@ var (
 			s.Group("/", func(group *ghttp.RouterGroup) {
 				group.Middleware(ghttp.MiddlewareHandlerResponse, service.Middleware().CORS)
 				group.Bind(
-					controller.User,
+					backend.User,
 				)
 			})
 			s.Group("/", func(group *ghttp.RouterGroup) {
 				group.Middleware(ghttp.MiddlewareHandlerResponse, service.Middleware().CORS, service.Middleware().Auth)
 				group.Bind(
 					controller.Hello,
-					controller.Role,
+					backend.Role,
 				)
 			})
 			s.Run()

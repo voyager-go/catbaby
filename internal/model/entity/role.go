@@ -19,6 +19,7 @@ type Role struct {
 	Achievement   string      `json:"achievement"   ` // 主要成就
 	Gender        uint        `json:"gender"        ` // 是否展示:0女1男
 	Content       string      `json:"content"       ` // 介绍
+	Views         int64       `json:"views"         ` // 浏览量
 	IfShow        uint        `json:"ifShow"        ` // 是否展示:0否1是
 	CreatedAt     *gtime.Time `json:"createdAt"     ` // 创建时间
 	UpdatedAt     *gtime.Time `json:"updatedAt"     ` // 更新时间

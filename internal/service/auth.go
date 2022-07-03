@@ -2,10 +2,11 @@ package service
 
 import (
 	"context"
-	jwt "github.com/gogf/gf-jwt/v2"
-	"github.com/gogf/gf/v2/frame/g"
 	"threebody/internal/model"
 	"time"
+
+	jwt "github.com/gogf/gf-jwt/v2"
+	"github.com/gogf/gf/v2/frame/g"
 )
 
 var auth *jwt.GfJWTMiddleware

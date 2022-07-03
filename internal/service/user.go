@@ -3,11 +3,12 @@ package service
 import (
 	"context"
 	"errors"
-	"github.com/gogf/gf/v2/frame/g"
-	"golang.org/x/crypto/bcrypt"
 	"threebody/internal/consts"
 	"threebody/internal/dao"
 	"threebody/internal/model"
+
+	"github.com/gogf/gf/v2/frame/g"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type sUser struct{}
