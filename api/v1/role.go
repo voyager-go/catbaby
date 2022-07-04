@@ -1,6 +1,9 @@
 package v1
 
-import "github.com/gogf/gf/v2/frame/g"
+import (
+	"github.com/gogf/gf/v2/frame/g"
+	"threebody/internal/model"
+)
 
 type RoleBaseReq struct {
 	Avatar        string `json:"avatar" dc:"头像"`
@@ -37,5 +40,5 @@ type RoleListReq struct {
 
 type RoleListRes struct {
 	g.Meta `mime:"text/html" type:"string" example:"<html/>"`
-	PaginationRes
+	*model.RoleListOutput
 }

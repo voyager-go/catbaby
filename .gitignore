@@ -19,3 +19,4 @@ output/
 manifest/output/
 temp/
 manifest/config/config.bak
+manifest/config/config.yaml

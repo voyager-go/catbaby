@@ -31,6 +31,7 @@ func (*sRole) Update(ctx context.Context, in model.RoleUpdateInput) error {
 	return err
 }
 
+// List 故事角色列表
 func (*sRole) List(ctx context.Context, in model.RoleListInput) (out *model.RoleListOutput, err error) {
 	var (
 		m    = dao.Role.Ctx(ctx)
