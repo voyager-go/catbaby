@@ -1,3 +1,7 @@
+GET http://127.0.0.1:8000/frontend/role
+Accept: application/json
+
+###
 POST http://127.0.0.1:8000/backend/role
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTY2ODU1ODUsImlkIjoyMywibmlja25hbWUiOiJ6aGFuZ3NhbiIsIm9yaWdfaWF0IjoxNjU2NjY3NTg1LCJwaG9uZSI6IjE1MTA1MTkxMTgyIn0.ZV3dd1hqvsPUR4CsU9E00w6u0KcLq1tBK9BfhFvLRiE
@@ -33,3 +37,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTY2ODU1O
   "content": "string",
   "if_show": "0"
 }
+

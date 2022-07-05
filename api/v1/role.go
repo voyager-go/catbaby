@@ -2,7 +2,6 @@ package v1
 
 import (
 	"github.com/gogf/gf/v2/frame/g"
-	"threebody/internal/model"
 )
 
 type RoleBaseReq struct {
@@ -39,6 +38,6 @@ type RoleListReq struct {
 }
 
 type RoleListRes struct {
-	g.Meta `mime:"text/html" type:"string" example:"<html/>"`
-	*model.RoleListOutput
+	g.Meta `mime:"text/json" example:"string"`
+	Data   interface{}
 }
