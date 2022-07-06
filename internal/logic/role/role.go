@@ -5,7 +5,6 @@ import (
 	"threebody/internal/consts"
 	"threebody/internal/dao"
 	"threebody/internal/model"
-	"threebody/internal/model/entity"
 	"threebody/internal/service"
 )
 
@@ -32,12 +31,11 @@ func (*sRole) Update(ctx context.Context, in model.RoleUpdateInput) error {
 }
 
 // List 故事角色列表
-func (*sRole) List(ctx context.Context, in model.RoleListInput) (out model.RoleListOutput, err error) {
+func (*sRole) List(ctx context.Context, in model.RoleListInput) (out *model.RoleListOutput, err error) {
 	var (
-		m    = dao.Role.Ctx(ctx)
-		list []*entity.Role
+		m = dao.Role.Ctx(ctx)
 	)
-	out = model.RoleListOutput{
+	out = &model.RoleListOutput{
 		Page: in.Page,
 		Size: in.Size,
 	}
@@ -47,13 +45,30 @@ func (*sRole) List(ctx context.Context, in model.RoleListInput) (out model.RoleL
 		m = m.WhereLike(dao.Role.Columns().Name, searchKeyword).WhereOrLike(dao.Role.Columns().Nickname, searchKeyword)
 	}
 	listModel := m.Page(in.Page, in.Size)
-	if err = listModel.Scan(&list); err != nil {
+	if err = listModel.Scan(&out.List); err != nil {
 		return
 	}
-	if len(list) == 0 {
+	if len(out.List) == 0 {
 		return
+	}
+	for i, item := range out.List {
+		out.List[i].GenderText = consts.RoleGenderState(item.Gender).String()
 	}
 	out.Total, err = m.Count()
+	if err != nil {
+		return
+	}
+	return
+}
+
+// Detail 详情
+func (*sRole) Detail(ctx context.Context, in model.RoleDetailInput) (out *model.RoleDetailOutput, err error) {
+	var m = dao.Role.Ctx(ctx)
+	m = m.Where(dao.Role.Columns().IfShow, consts.RoleIfShowOk)
+	err = m.Where(dao.Role.Columns().Id, in.Id).Scan(&out)
+	if out.Id > 0 {
+		out.GenderText = consts.RoleGenderState(out.Gender).String()
+	}
 	if err != nil {
 		return
 	}

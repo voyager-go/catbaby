@@ -12,7 +12,8 @@ import (
 type IRole interface {
 	Create(ctx context.Context, in model.RoleCreateInput) error
 	Update(ctx context.Context, in model.RoleUpdateInput) error
-	List(ctx context.Context, in model.RoleListInput) (out model.RoleListOutput, err error)
+	List(ctx context.Context, in model.RoleListInput) (out *model.RoleListOutput, err error)
+	Detail(ctx context.Context, in model.RoleDetailInput) (out *model.RoleDetailOutput, err error)
 }
 
 var localRole IRole

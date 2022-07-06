@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/gogf/gf/v2/frame/g"
+	"threebody/internal/model"
 )
 
 type RoleBaseReq struct {
@@ -17,12 +18,12 @@ type RoleBaseReq struct {
 }
 
 type RoleCreateReq struct {
-	g.Meta `path:"/backend/role" tags:"三体" method:"post" summary:"故事角色"`
+	g.Meta `path:"/backend/role" tags:"三体" method:"post" summary:"创建故事角色"`
 	RoleBaseReq
 }
 
 type RoleUpdateReq struct {
-	g.Meta `path:"/backend/role" tags:"三体" method:"put" summary:"故事角色"`
+	g.Meta `path:"/backend/role" tags:"三体" method:"put" summary:"更新故事角色"`
 	Id     string `json:"id" v:"required#请选择需要修改的角色"`
 	RoleBaseReq
 }
@@ -32,12 +33,22 @@ type RoleRes struct {
 }
 
 type RoleListReq struct {
-	g.Meta `path:"/frontend/role" method:"get" tags:"故事角色" summary:"展示故事角色列表页面"`
+	g.Meta `path:"/frontend/role" method:"get" tags:"三体" summary:"故事角色列表"`
 	Search string `json:"search" dc:"关键词"`
 	PaginationReq
 }
 
 type RoleListRes struct {
 	g.Meta `mime:"text/json" example:"string"`
-	Data   interface{}
+	*model.RoleListOutput
+}
+
+type RoleDetailReq struct {
+	g.Meta `path:"/frontend/role/{id}" method:"get" tags:"三题" summary:"故事角色详情"`
+	Id     string `json:"id" dc:"主键编号"`
+}
+
+type RoleDetailRes struct {
+	g.Meta `mime:"text/json" example:"string"`
+	*model.RoleDetailOutput
 }

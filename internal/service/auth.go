@@ -21,7 +21,7 @@ func init() {
 		Key:             []byte("mingyuejishiyou"),
 		Timeout:         time.Minute * 300,
 		MaxRefresh:      time.Minute * 5,
-		IdentityKey:     "auth_unique_key",
+		IdentityKey:     "phone",
 		TokenLookup:     "header: Authorization, query: token, cookie: jwt",
 		TokenHeadName:   "Bearer",
 		TimeFunc:        time.Now,

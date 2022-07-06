@@ -18,11 +18,20 @@ type RoleListInput struct {
 	Search string // 搜索关键词
 }
 
+// RoleDetailInput 故事角色详情
+type RoleDetailInput struct {
+	Id uint
+}
+
 type RoleListOutput struct {
 	Page  int            `json:"page" description:"页码"`
 	Size  int            `json:"size" description:"每页条数"`
 	Total int            `json:"total" description:"总条目"`
 	List  []RoleBaseItem `json:"list" description:"列表"`
+}
+
+type RoleDetailOutput struct {
+	RoleBaseItem `json:"role" description:"详情"`
 }
 
 type RoleBaseInput struct {
@@ -49,5 +58,4 @@ type RoleBaseItem struct {
 	GenderText    string `json:"gender_text"`    // 性别 枚举值
 	Content       string `json:"content"`        // 介绍
 	IfShow        uint   `json:"if_show"`        // 是否展示:0否1是
-	IFShowText    string `json:"if_show_text"`   // 是否展示 枚举值
 }
