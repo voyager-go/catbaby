@@ -31,7 +31,7 @@ type RoleListOutput struct {
 }
 
 type RoleDetailOutput struct {
-	RoleBaseItem `json:"role" description:"详情"`
+	RoleBaseItem `json:"" description:"详情"`
 }
 
 type RoleBaseInput struct {

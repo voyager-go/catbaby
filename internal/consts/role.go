@@ -7,6 +7,7 @@ const (
 	RoleIfShowDisabled                 = 0 // 不展示用户
 	RoleGenderMan      RoleGenderState = 1 // 男性
 	RoleGenderFemale   RoleGenderState = 0 // 女性
+	RoleNotFoundErrMsg                 = "未查询到故事角色"
 )
 
 func (s RoleGenderState) String() string {

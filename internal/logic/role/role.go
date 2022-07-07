@@ -2,6 +2,7 @@ package role
 
 import (
 	"context"
+	"errors"
 	"threebody/internal/consts"
 	"threebody/internal/dao"
 	"threebody/internal/model"
@@ -66,11 +67,16 @@ func (*sRole) Detail(ctx context.Context, in model.RoleDetailInput) (out *model.
 	var m = dao.Role.Ctx(ctx)
 	m = m.Where(dao.Role.Columns().IfShow, consts.RoleIfShowOk)
 	err = m.Where(dao.Role.Columns().Id, in.Id).Scan(&out)
-	if out.Id > 0 {
-		out.GenderText = consts.RoleGenderState(out.Gender).String()
-	}
 	if err != nil {
 		return
 	}
+	if out == nil {
+		err = errors.New(consts.RoleNotFoundErrMsg)
+		return
+	}
+	if out.Id > 0 {
+		out.GenderText = consts.RoleGenderState(out.Gender).String()
+	}
+
 	return
 }

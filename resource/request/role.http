@@ -1,4 +1,4 @@
-GET http://127.0.0.1:8000/frontend/role/27
+GET http://127.0.0.1:8000/frontend/role/29
 Accept: application/json
 
 
@@ -10,12 +10,12 @@ Accept: application/json
 ###
 POST http://127.0.0.1:8000/backend/role
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTcxMzk2NjksImlkIjoxNCwibmlja25hbWUiOiJ6aGFuZ3NhbiIsIm9yaWdfaWF0IjoxNjU3MTIxNjY5LCJwaG9uZSI6IjE1MTA1MTkxMTgyIn0.KC9Fg9sCjFaW985obPP2Z3L5i4axwa8cTngTGNp3I0w
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTcyMjQ0MTAsImlkIjoxNCwibmlja25hbWUiOiJ6aGFuZ3NhbiIsIm9yaWdfaWF0IjoxNjU3MjA2NDEwLCJwaG9uZSI6IjE1MTA1MTkxMTgyIn0.YHVuIk51Ng0pde_wnhTIJEK1lFW-2Ath53iRYByPe2U
 
 {
   "avatar": "https://goframe.org/pages/viewpage.action?pageId=1114517&src=contextnavpagetreemode",
-  "name": "Bob",
-  "nickname": "小李四",
+  "name": "KangKang",
+  "nickname": "康康",
   "survival_stage": "掩体",
   "nationality": "汉族",
   "achievement": "123",
