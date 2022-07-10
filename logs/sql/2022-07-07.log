@@ -1,0 +1,134 @@
+2022-07-07 00:06:19.491 [DEBU] {909ffa991d49ff165190f529f63f80a9} [109 ms] [default] [rows:2  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE `if_show`=1 LIMIT 2,2 
+2022-07-07 00:06:19.544 [DEBU] {909ffa991d49ff165190f529f63f80a9} [ 52 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `role` WHERE `if_show`=1 
+2022-07-07 00:06:30.156 [DEBU] {f81545192049ff165290f52987759233} [ 48 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`name` LIKE '%bob%') OR (`nickname` LIKE '%bob%') LIMIT 2,2 
+2022-07-07 00:06:40.550 [DEBU] {689097842249ff165390f5292e9e6b4d} [ 52 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`name` LIKE '%Bob%') OR (`nickname` LIKE '%Bob%') LIMIT 2,2 
+2022-07-07 00:07:45.431 [DEBU] {b8d6e59a3149ff165490f529e0a3a431} [134 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`name` LIKE '%Bob%') OR (`nickname` LIKE '%Bob%') LIMIT 0,2 
+2022-07-07 00:07:45.485 [DEBU] {b8d6e59a3149ff165490f529e0a3a431} [ 54 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `role` WHERE (`if_show`=1) AND (`name` LIKE '%Bob%') OR (`nickname` LIKE '%Bob%') 
+2022-07-07 00:24:21.966 [DEBU] {409416a0194aff16898cb00d33eed64b} [147 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 00:24:22.010 [DEBU] {409416a0194aff16898cb00d33eed64b} [ 43 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=27) LIMIT 1 
+2022-07-07 00:25:04.031 [DEBU] {f084c26c234aff163735a644b10d38a6} [126 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 00:25:04.073 [DEBU] {f084c26c234aff163735a644b10d38a6} [ 41 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=27) LIMIT 1 
+2022-07-07 00:26:00.317 [DEBU] {c078de89304aff160094324161354198} [ 88 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 00:26:00.357 [DEBU] {c078de89304aff160094324161354198} [ 39 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=27) LIMIT 1 
+2022-07-07 00:28:00.040 [DEBU] {4882f1694c4aff16723cad50661bddfc} [ 88 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 00:28:00.108 [DEBU] {4882f1694c4aff16723cad50661bddfc} [ 66 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=27) LIMIT 1 
+2022-07-07 00:29:02.281 [DEBU] {d003b2e65a4aff16403da104269770ba} [106 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 00:29:02.329 [DEBU] {d003b2e65a4aff16403da104269770ba} [ 46 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=27) LIMIT 1 
+2022-07-07 23:06:50.761 [DEBU] {086ee1437394ff167479e64af2f43c6d} [ 83 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `user` 
+2022-07-07 23:06:50.803 [DEBU] {086ee1437394ff167479e64af2f43c6d} [ 40 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`nickname`,`phone`,`password`,`status`,`created_at` FROM `user` WHERE `phone`='15105191182' LIMIT 1 
+2022-07-07 23:07:22.779 [DEBU] {f0ba71b87a94ff167579e64a3cbbacd8} [ 80 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:07:22.827 [ERRO] {f0ba71b87a94ff167579e64a3cbbacd8} [ 47 ms] [default] [rows:0  ] INSERT INTO `role`(`avatar`,`nationality`,`achievement`,`nickname`,`gender`,`content`,`updated_at`,`survival_stage`,`name`,`if_show`,`created_at`) VALUES('https://goframe.org/pages/viewpage.action?pageId=1114517&src=contextnavpagetreemode','汉族','123','小李四',1,'string','2022-07-07 23:07:22','掩体','Bob',1,'2022-07-07 23:07:22') 
+Error: Error 1062: Duplicate entry 'Bob' for key 'role_name_uindex' 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core.go:656
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core_underlying.go:250
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core_underlying.go:112
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_core.go:445
+5.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_model_insert.go:313
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).Insert
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/database/gdb/gdb_model_insert.go:170
+7.  threebody/internal/logic/role.(*sRole).Create
+    /Users/quman/GolandProjects/threebody/internal/logic/role/role.go:23
+8.  threebody/internal/controller/backend.(*role).Create
+    /Users/quman/GolandProjects/threebody/internal/controller/backend/role.go:22
+9.  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:153
+10. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+11. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:128
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:74
+13. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+14. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+15. threebody/internal/service.(*middlewareService).Auth
+    /Users/quman/GolandProjects/threebody/internal/service/middleware.go:22
+16. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:54
+17. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+18. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:53
+19. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+21. threebody/internal/service.(*middlewareService).CORS
+    /Users/quman/GolandProjects/threebody/internal/service/middleware.go:17
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:54
+23. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:53
+25. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+27. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_middleware_handler_response.go:25
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:54
+29. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:53
+31. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+33. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_middleware_tracing.go:78
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:95
+35. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_func.go:56
+36. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:94
+37. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/util/gutil/gutil.go:55
+38. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_request_middleware.go:48
+39. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/quman/go/pkg/mod/github.com/gogf/gf/v2@v2.0.4/net/ghttp/ghttp_server_handler.go:121
+ 
+2022-07-07 23:07:53.263 [DEBU] {18341fd18194ff167679e64a4c6980b3} [ 87 ms] [default] [rows:1  ] INSERT INTO `role`(`content`,`created_at`,`survival_stage`,`name`,`updated_at`,`avatar`,`gender`,`achievement`,`nickname`,`if_show`,`nationality`) VALUES('string','2022-07-07 23:07:53','掩体','Kang','2022-07-07 23:07:53','https://goframe.org/pages/viewpage.action?pageId=1114517&src=contextnavpagetreemode',1,'123','康康',1,'汉族')  
+2022-07-07 23:08:39.569 [DEBU] {f0c533988c94ff167779e64a05265efc} [103 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=27) LIMIT 1 
+2022-07-07 23:14:00.581 [DEBU] {c8b73856d794ff167879e64a07473ee2} [ 98 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=2) LIMIT 1 
+2022-07-07 23:14:52.262 [DEBU] {e01d5f5fe394ff161794ad7571e0a6f5} [ 87 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:14:52.299 [DEBU] {e01d5f5fe394ff161794ad7571e0a6f5} [ 36 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=2) LIMIT 1 
+2022-07-07 23:16:15.877 [DEBU] {5033efd6f694ff161f909023c6ddbf93} [ 91 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:16:15.913 [DEBU] {5033efd6f694ff161f909023c6ddbf93} [ 35 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=28) LIMIT 1 
+2022-07-07 23:16:37.561 [DEBU] {083a56e3fb94ff16a1d50135223beeaf} [ 92 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:16:37.613 [DEBU] {083a56e3fb94ff16a1d50135223beeaf} [ 51 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=28) LIMIT 1 
+2022-07-07 23:17:38.389 [DEBU] {e06f560d0a95ff168cf414101afd0b12} [ 86 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:17:38.427 [DEBU] {e06f560d0a95ff168cf414101afd0b12} [ 36 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=28) LIMIT 1 
+2022-07-07 23:18:02.671 [DEBU] {a8ae9eb30f95ff16da7a67073a184658} [103 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:18:02.707 [DEBU] {a8ae9eb30f95ff16da7a67073a184658} [ 34 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=28) LIMIT 1 
+2022-07-07 23:18:42.998 [DEBU] {782aae171995ff163ad32670b95d835f} [ 97 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:18:43.038 [DEBU] {782aae171995ff163ad32670b95d835f} [ 39 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=28) LIMIT 1 
+2022-07-07 23:19:12.733 [DEBU] {f88273042095ff160a32ca003fab90a2} [ 90 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:19:12.770 [DEBU] {f88273042095ff160a32ca003fab90a2} [ 35 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=28) LIMIT 1 
+2022-07-07 23:30:52.428 [DEBU] {58af00edc295ff163dea19222d2fa77f} [ 99 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:30:52.471 [DEBU] {58af00edc295ff163dea19222d2fa77f} [ 43 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=28) LIMIT 1 
+2022-07-07 23:31:48.993 [DEBU] {8046dc17d095ff16f56a8b488734a812} [110 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:31:49.040 [DEBU] {8046dc17d095ff16f56a8b488734a812} [ 46 ms] [default] [rows:0  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=28) LIMIT 1 
+2022-07-07 23:31:55.610 [DEBU] {d8a268a3d195ff16f66a8b48da7ddff1} [ 92 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 
+2022-07-07 23:37:44.644 [DEBU] {a8ac71e72296ff1673873419c73990e9} [ 89 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:37:44.691 [DEBU] {a8ac71e72296ff1673873419c73990e9} [ 46 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 
+2022-07-07 23:51:55.398 [DEBU] {a055e2fae896ff1674873419242024da} [116 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 
+2022-07-07 23:55:29.837 [DEBU] {1841aee91a97ff163c090126a6a59e0c} [ 95 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:55:29.884 [DEBU] {1841aee91a97ff163c090126a6a59e0c} [ 46 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 
+2022-07-07 23:56:03.283 [DEBU] {a8c78eb32297ff16d3133167170fc1f1} [ 88 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:56:03.319 [DEBU] {a8c78eb32297ff16d3133167170fc1f1} [ 35 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 
+2022-07-07 23:58:05.743 [DEBU] {60b8a5363f97ff16a35eee6388045414} [ 91 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:58:05.789 [DEBU] {60b8a5363f97ff16a35eee6388045414} [ 45 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 
+2022-07-07 23:59:04.301 [DEBU] {985651d94c97ff16a3144d54850800bb} [ 85 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-07 23:59:04.340 [DEBU] {985651d94c97ff16a3144d54850800bb} [ 37 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 

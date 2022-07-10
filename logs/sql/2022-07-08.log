@@ -1,0 +1,6 @@
+2022-07-08 00:00:24.931 [DEBU] {7827e19e5f97ff165be0f413cf5ab52c} [ 89 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-08 00:00:24.977 [DEBU] {7827e19e5f97ff165be0f413cf5ab52c} [ 44 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 
+2022-07-08 00:00:43.494 [DEBU] {f01529f16397ff164b059f4dac4c5745} [ 93 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-08 00:00:43.683 [DEBU] {f01529f16397ff164b059f4dac4c5745} [187 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 
+2022-07-08 00:01:08.189 [DEBU] {783904b06997ff168b03f5596f86e309} [111 ms] [default] [rows:13 ] SHOW FULL COLUMNS FROM `role` 
+2022-07-08 00:01:08.223 [DEBU] {783904b06997ff168b03f5596f86e309} [ 33 ms] [default] [rows:1  ] SELECT `id`,`avatar`,`name`,`nickname`,`survival_stage`,`nationality`,`achievement`,`gender`,`content`,`if_show` FROM `role` WHERE (`if_show`=1) AND (`id`=29) LIMIT 1 
